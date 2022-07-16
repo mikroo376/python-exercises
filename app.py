@@ -3,3 +3,5 @@ print(lista)
 lista.remove(lista[0])
 
 print(lista)
+
+test = [1,2,3]
