@@ -19,9 +19,6 @@ def init():
     else:
 
       return calculate(steps)
-        
-
-
 def calculate(steps):
     prevOperation = ""
     result = 0
