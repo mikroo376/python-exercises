@@ -1,25 +1,45 @@
-class Car():
-    def __init__(self, productionYear, brand):
-        self.productionYear = productionYear
-        self.model = brand
-    def startEngine(self):
-        return print("Starting engine...")
-    def StopEngine(self):
-        return print("Stopping engine...")
-
-
-class Honda(Car):
-    def __init__(self, model, productionYear, brand):
-        self.model = model
-        super().__init__(productionYear, brand)
+operation = 0
+result = 0
+steps = []
+prevOperation = ""
 
 
 
-my_car = Car(2010, "Honda")
-my_car2 = Car(2018, "BMW")
 
-honda = Honda("Civic", 1995, "Honda")
+                                                
+while operation != 5:
+    number = int(input("Type number: "))
+    operation = int(input("1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Result\nOperation: "))
+    steps.append(number)
+    if operation > 5:
+        print("Please choose correct operation")
+        break
+    elif operation == 1:
+        steps.append("+")
+    elif operation == 2:
+        steps.append("-")
+    elif operation == 3:
+        steps.append("*")
+    elif operation == 4:
+        steps.append("/")
+else:
 
+    for element in steps:
+        # print(prevOperation)
+        if prevOperation == "":
+            result += element
+            prevOperation = "x"
+        elif type(element) == type(""):
+            prevOperation = element
+            
+        elif type(element) == type(0) and prevOperation == "+":
+            result += element
+        elif type(element) == type(0) and prevOperation == "-":
+            result -= element
+        elif type(element) == type(0) and prevOperation == "*":
+            result *= element
+        elif type(element) == type(0) and prevOperation == "/":
+            result /= element
+   
+    print(f"{'#'*100}\nRESULT = {steps} = {result}\n{'#'*100}")
 
-
-print(honda.productionYear)
