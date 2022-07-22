@@ -1,6 +1,6 @@
 import random
 min_number = 1
-max_number = 10
+max_number = 15
 guess_count = 0
 guess_limit = 3
 
@@ -20,4 +20,4 @@ while guess_count != guess_limit:
     
 
 else: 
-    print("Sorry you are out of gueses!")
+    print(f"Sorry you are out of gueses!\nThe hidden number was {random_number}")
