@@ -47,5 +47,9 @@ def hangman():
 hangman()
 
 # TO DO:
-# 1. Add user lifes count and limit of lifes that user has
-# 2. Add "hint" feature for user when 3 lifes left. (words = dict / "Word":"Hint")
+# 1. Add validation / allow user to enter only single letter. Give 1 more chance to type correct letter.
+# 2. At the end of the game ask user if he wants to play again.
+# 3. If user wants to play again, make sure that secret word from game before doesn't appear in next games.
+# 4. Add user lifes count and limit of lifes that user has / if user type same letter again life count doesnt decrease. 
+# 5. Add difficulty level and ask user before game starts which level is he choosing (life count difference)
+# 6*. Add "hint" feature for user when 3 lifes left. (words = dict / "Word":"Hint")
